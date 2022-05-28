@@ -52,7 +52,7 @@ const Home: NextPage = () => {
                 >CLIQUE AQUI E RECEBA UMA AVALIAÇÃO SEM CUSTO <IoIosArrowDown size={20}/></button>
               </div>
               <div className="col-12 d-flex  justify-content-center align-items-center">
-                <img width="768" height="187" src="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png" className="attachment-medium_large size-medium_large" alt="" loading="lazy" srcset="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png 768w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-300x73.png 300w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo.png 843w" sizes="(max-width: 768px) 100vw, 768px" />
+                <img width="768" height="187" src="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png" className="attachment-medium_large size-medium_large" alt="" loading="lazy" srcSet="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png 768w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-300x73.png 300w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo.png 843w" sizes="(max-width: 768px) 100vw, 768px" />
               </div>
             </div>
           </div>
