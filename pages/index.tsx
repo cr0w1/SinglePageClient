@@ -5,19 +5,20 @@ import { FaBalanceScale , FaCarAlt } from 'react-icons/fa'
 import { FcIdea } from 'react-icons/fc'
 import { IoIosArrowDown } from 'react-icons/io'
 import { FiPhoneCall , FiArrowRight } from 'react-icons/fi'
-import { BsCheck } from 'react-icons/bs'
+import { BsCheck , BsWhatsapp } from 'react-icons/bs'
 import { BiShield } from 'react-icons/bi'
 import { ImProfile } from 'react-icons/im'
 import { GrSearch } from 'react-icons/gr'
-import Image from 'next/image'
+import styled, { keyframes } from 'styled-components';
+import { slideInLeft } from 'react-animations';
 
+const slideInLeftAnimation = keyframes`${slideInLeft}`;
+
+const BouncyDiv = styled.div`
+  animation: 2s ${slideInLeftAnimation};
+`;
 
 const Home: NextPage = () => {
-
-  const myLoader =  () => {
-    return `https://imgur.com/2kXZ7AS.png`
-  }
-
   return (
     <div className={styles.container}>
       <Head>
@@ -67,18 +68,11 @@ const Home: NextPage = () => {
             className="row"
             style={{ marginLeft: 0.3 , width: '100%', height: '100%'}}
           >
-            <div
+            <BouncyDiv
               className="col-lg-5 col-md-12  d-flex justify-content-center align-items-end"
             >
-              <Image
-                // className='animate__animated animate__slideInLeft animate__delay-1s'
-                loader={myLoader}
-                src="me.png"
-                alt="Picture of the author"
-                width={500}
-                height={600}
-              />
-            </div>
+              <img src="https://imgur.com/2kXZ7AS.png" alt="" srcSet="" />
+            </BouncyDiv>
             <div
               className="col-md-12 col-lg-7"
             >
@@ -245,11 +239,11 @@ const Home: NextPage = () => {
               style={{ height: 300 , backgroundColor: '#B89161'}}
             >
               <div className="card-body" style={{ padding: 25 }}>
-                <div className="col-12 d-flex justify-content-center">
+                <div className=" col-12 d-flex justify-content-center">
                   <FaBalanceScale size={45}/>
                 </div>
                 <h4 className="card-title col-12" style={{ marginTop: 25 , textAlign: 'center' , fontWeight: 'bold'}}>Efeito Suspensivo da Pena</h4>
-                <p className="card-text col-12" style={{ marginTop: 46 }}>Enquanto estiver recorrendo você não é penalizado. Pode dirigir tranquilamente e até renovar a CNH.</p>
+                <p className="card-text col-12" style={{ marginTop: 18 }}>Enquanto estiver recorrendo você não é penalizado. Pode dirigir tranquilamente e até renovar a CNH.</p>
               </div>
             </div>
             <div
@@ -315,7 +309,7 @@ const Home: NextPage = () => {
               style={{ height: 350 , background: 'none' , borderLeft: 'none' , borderTop: 'none' , borderBottom: 'none' , borderRight: 'none'}}
             >
               <div className="card-body row" style={{ padding: 25 }}>
-                <div className={styles.img_icon+" col-12 d-flex justify-content-center"} style={{ height: 40}}>
+                <div className={styles.hover_icon_efect +" "+ styles.img_icon+" col-12 d-flex justify-content-center"} style={{ height: 40}}>
                   <img src="https://promultas.com.br/wp-content/uploads/2022/04/contracts.png" alt="Solicite a avaliação gratuita" width="60" height="60" />
                 </div>
                 <div className="col-12" style={{ textAlign: 'center' }}>
@@ -330,7 +324,7 @@ const Home: NextPage = () => {
               style={{ height: 350 , background: 'none' ,borderTop: 'none' , borderBottom: 'none' , borderRadius: 0}}
             >
               <div className="card-body row" style={{ padding: 25 }}>
-                <div className="col-12 d-flex justify-content-center" style={{ height: 90}}>
+                <div className={styles.hover_icon_efect +" col-12 d-flex justify-content-center"} style={{ height: 90}}>
                   <img src="https://promultas.com.br/wp-content/uploads/2022/04/copyrights.png" alt="Faremos a análise do caso" width="60" height="60" />
                 </div>
                 <div className="col-12" style={{ textAlign: 'center' }}>
@@ -345,7 +339,7 @@ const Home: NextPage = () => {
               style={{ height: 350 , background: 'none' , borderLeft: 'none' , borderTop: 'none' , borderBottom: 'none' , borderRight: 'none'}}
             >
               <div className="card-body row" style={{ padding: 25 }}>
-                <div className="col-12 d-flex justify-content-center" style={{ height: 90}}>
+                <div className={styles.hover_icon_efect + " col-12 d-flex justify-content-center"} style={{ height: 90}}>
                   <img src="https://promultas.com.br/wp-content/uploads/2022/04/child.png" alt="Recurso elaborado!"  width="60" height="60" />
                 </div>
                 <div className="col-12" style={{ textAlign: 'center' }}>
@@ -371,6 +365,13 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
+      <div className={styles.fab_container}>
+        <div className={`${styles.button} ${styles.iconbutton}`}>
+          <a href="" target="_blank">
+            <BsWhatsapp size={25} color='#fff'/>
+          </a>
+        </div>
+      </div>
     </div>
   )
 }

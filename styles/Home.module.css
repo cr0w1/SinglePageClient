@@ -201,42 +201,29 @@
 
 
 
-.fab{
-  width: 100px;
-  height: 100px;
-  position: fixed;
-  bottom:10px;
-  right:10px;
+.fab_container{
+  position:fixed;
+  bottom:80px;
+  right: 29px;
+  cursor:pointer;
 }
 
-.fab button{
-  cursor: pointer;
-  width: 48px;
-  height: 48px;
-  border-radius: 30px;
-  background-color: #cb60b3;
-  border: none;
-  box-shadow: 0 1px 5px rgba(0,0,0,.4);
-  font-size: 24px;
-  color: white;
-    
-  -webkit-transition: .2s ease-out;
-  -moz-transition: .2s ease-out;
-  transition: .2s ease-out;
+.iconbutton{
+  width:20px;
+  height:20px;
+  border-radius: 100%;
+  background: #fff;
+}
+.button{
+  width:50px;
+  height:50px;
+  background:#25d366;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.fab button.main{
-  position: absolute;
-  width: 60px;
-  height: 60px;
-  border-radius: 30px;
-  background-color: #5b19b7;
-  right: 0;
-  bottom: 0;
-  z-index: 20;
+.hover_icon_efect:hover {
+  transform: translateY(-15px);
+  transition: 1s;
 }
-
-.fab button.main:before{
-  content: '⏚';
-}
-  
