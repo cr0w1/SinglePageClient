@@ -25,37 +25,17 @@ const imagem_1 = () => {
 }
 
 const Home: NextPage = () => {
-  const useWindowDimensions = () => {
-    const hasWindow = typeof window !== "undefined"
-  
-    function getWindowDimensions() {
-      const width = hasWindow ? window.innerWidth : null
-      const height = hasWindow ? window.innerHeight : null
-      return {
-        width,
-        height,
-      }
-    }
-  
-    const [windowDimensions, setWindowDimensions] = useState(
-      getWindowDimensions()
-    )
-  
+  const useWidth = () => {
+    const [width, setWidth] = useState(0); // default width, detect on server.
+    const handleResize = () => setWidth(window.innerWidth);
     useEffect(() => {
-      if (hasWindow) {
-        function handleResize() {
-          setWindowDimensions(getWindowDimensions())
-        }
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, [handleResize]);
+    return width;
+};
   
-        window.addEventListener("resize", handleResize)
-        return () => window.removeEventListener("resize", handleResize)
-      }
-    }, [hasWindow])
-  
-    return windowDimensions
-  }
-  
-  const { height, width } = useWindowDimensions()
+  const  width = useWidth()
 
   return (
     <div className={styles.container}>
