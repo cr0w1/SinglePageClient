@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
@@ -24,6 +25,38 @@ const imagem_1 = () => {
 }
 
 const Home: NextPage = () => {
+  const useWindowDimensions = () => {
+    const hasWindow = typeof window !== "undefined"
+  
+    function getWindowDimensions() {
+      const width = hasWindow ? window.innerWidth : null
+      const height = hasWindow ? window.innerHeight : null
+      return {
+        width,
+        height,
+      }
+    }
+  
+    const [windowDimensions, setWindowDimensions] = useState(
+      getWindowDimensions()
+    )
+  
+    useEffect(() => {
+      if (hasWindow) {
+        function handleResize() {
+          setWindowDimensions(getWindowDimensions())
+        }
+  
+        window.addEventListener("resize", handleResize)
+        return () => window.removeEventListener("resize", handleResize)
+      }
+    }, [hasWindow])
+  
+    return windowDimensions
+  }
+  
+  const { height, width } = useWindowDimensions()
+
   return (
     <div className={styles.container}>
       <Head>
@@ -34,22 +67,58 @@ const Home: NextPage = () => {
         <link rel="canonical" href="https://promultas.com.br/advogados-lei-seca/" />
       </Head>
 
-      <section className={styles.section_initial} style={{ width: '100%', height: 767.5 }}>
+      <section className={styles.section_initial} style={{ width: '100%', height: width <= 360 ? 600 : ( width <= 460 ? 650 : 767.5) }}>
         <div style={{ width: '100%', display: 'flex', justifyContent: 'center' , alignItems: 'center' , fontFamily: 'Spartan, sans-serif' }}>
           <div className="d-flex align-items-center" style={{ width: '100%',}}>
             <div className="col-12 " style={{ padding: 15, height: 600}}>
-              <div className="col-12 d-flex  justify-content-center align-items-center" style={{ padding: '15px 0' , marginTop: 30 }}  >
-                <span style={{ backgroundColor: '#fff' , content: '' , width: 200 , height: 1 }}></span>
-                <span style={{ fontSize: 18 , fontWeight: 'bold' , padding: 8 , color: '#fff'}}>ADVOGADOS DE TRÂNSITO</span>
-                <span style={{ backgroundColor: '#fff' , content: '' , width: 200 , height: 1 }}></span>
+              <div className={`${styles.margin_bloco_1} col-12 d-flex  justify-content-center align-items-center`}
+                style={{
+                  padding: '15px 0',
+                  marginTop: width <= 360 ? 45 : ( width <= 460 ? 40 : 30)
+                }}
+              >
+                <span
+                  style={{
+                    backgroundColor: '#fff',
+                    content: '',
+                    width:  width <= 360 ? 45 : ( width <= 460 ? 43 : 200),
+                    height: 1
+                  }}></span>
+                <span style={{ fontSize: width <= 360 ? 15 : ( width <= 460 ? 18 : 18) , fontWeight: 'bold' , padding: 8 , color: '#fff'}}>ADVOGADOS DE TRÂNSITO</span>
+                <span style={{
+                    backgroundColor: '#fff',
+                    content: '',
+                    width:  width <= 360 ? 45 : ( width <= 460 ? 43 : 200),
+                    height: 1
+                  }}></span>
               </div>
               <div className="col-12 d-flex justify-content-center align-items-center">
-                <span style={{ fontSize: 60, fontWeight: 'bold' , color: '#fff' }}>Foi multado pela Lei Seca?</span>
+                  <span style={{
+                    fontSize: width <= 360 ? 37 : ( width <= 460 ? 40 : 60),
+                    fontWeight: 'bold',
+                    color: '#fff',
+                    
+                  }}>Foi multado pela Lei Seca?</span>
               </div>
               <div className="col-12 d-flex  justify-content-center align-items-center" style={{ padding: '15px 0' }}>
-                <span style={{ backgroundColor: '#fff' , content: '' , width: 200 , height: 1 }}></span>
-                <span style={{ fontSize: 18 , fontWeight: 'bold' , padding: 8 , color: '#fff' }}>NÓS TE EXPLICAMOS TUDO</span>
-                <span style={{ backgroundColor: '#fff' , content: '' , width: 200 , height: 1 }}></span>
+                <span style={{
+                    backgroundColor: '#fff',
+                    content: '',
+                    width:  width <= 360 ? 45 : ( width <= 460 ? 40 : 200),
+                    height: 1
+                  }}></span>
+                <span style={{
+                  fontSize: width <= 360 ? 15 : ( width <= 460 ? 18 : 18) ,
+                  fontWeight: 'bold' ,
+                  padding: 8 ,
+                  color: '#fff'
+                }}>NÓS TE EXPLICAMOS TUDO</span>
+                <span style={{
+                    backgroundColor: '#fff',
+                    content: '',
+                    width:  width <= 360 ? 45 : ( width <= 460 ? 40 : 200),
+                    height: 1
+                  }}></span>
               </div>
               <div className="col-12 d-flex justify-content-center align-items-center" style={{ marginTop: 30 }}>
                 <button
@@ -58,7 +127,7 @@ const Home: NextPage = () => {
                 >CLIQUE AQUI E RECEBA UMA AVALIAÇÃO SEM CUSTO <IoIosArrowDown size={20}/></button>
               </div>
               <div className="col-12 d-flex  justify-content-center align-items-center">
-                <img width="768" height="187" src="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png" className="attachment-medium_large size-medium_large" alt="" loading="lazy" srcSet="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png 768w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-300x73.png 300w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo.png 843w" sizes="(max-width: 768px) 100vw, 768px" />
+                <img src="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png" className="attachment-medium_large size-medium_large" alt="" loading="lazy" srcSet="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png 768w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-300x73.png 300w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo.png 843w" sizes="(max-width: 768px) 100vw, 768px" />
               </div>
             </div>
           </div>
@@ -108,8 +177,19 @@ const Home: NextPage = () => {
                 style={{ marginTop: 20 , fontFamily: 'Times New Roman , sans-serif'}}
               >
                 <div
-                  className={styles.box_1+" card col-md-6 col-lg-6"}
-                  style={{ position: "relative" , right: -10 }}
+                  className=" card col-md-6 col-lg-6"
+                  style={{
+                    position: "relative" ,
+                    right: width <= 360 ? 0 : ( width <= 460 ? 0 : -10),
+                    height: 120,
+                    background: 'none',
+                    borderTop: `${width <= 360 ? '0' : ( width <= 460 ? '0' : '2')}px solid #eaeaeae3`,
+                    borderRight: `${width <= 360 ? '0' : ( width <= 460 ? '0' : '2')}px solid #eaeaeae3`,
+                    borderTopLeftRadius: 0,
+                    borderBottomLeftRadius: 0,
+                    borderLeft: 'none',
+                    borderBottom: 'none',
+                  }}
                 >
                   <div className="card-body row" style={{ padding: 25 }}>
                     <div className="col-3">
@@ -123,7 +203,17 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div
-                  className={styles.box_2+" card col-md-6 col-lg-6"}
+                  className=" card col-md-6 col-lg-6"
+                  style={{
+                    height: 120,
+                    background: 'none',
+                    borderTop: '2px solid #eaeaeae3',
+                    borderTopLeftRadius: 0,
+                    borderBottomLeftRadius: 0,
+                    borderLeft: 'none',
+                    borderBottom: 'none',
+                    borderRight: 'none',
+                  }}
                 >
                   <div className="card-body row" style={{ padding: 25 }}>
                     <div className="col-3">
@@ -176,7 +266,7 @@ const Home: NextPage = () => {
       <section
         style={{ width: '100%', backgroundColor: '#B89161', fontFamily: 'Spartan, sans-serif'}}
       > 
-        <div className="col-12" style={{ paddingTop: 10, paddingLeft: 50 , paddingRight: 50 , paddingBottom: 10 ,}}>
+        <div className="col-12" style={{ paddingTop: 10, paddingLeft: width <= 360 ? 0 : ( width <= 460 ? 0 : 50) , paddingRight: width <= 360 ? 0 : ( width <= 460 ? 0 : 50) , paddingBottom: 10 ,}}>
           <div className="container">
             <div style={{ textAlign: 'center' , backgroundColor: '#ffff' , paddingTop: 40, paddingBottom: 30 , paddingLeft: 10 , paddingRight: 10}}>
               <h6 style={{ fontWeight: 'bold' , marginBottom: 20 }}>SUPREMO TRIBUNAL FEDERAL</h6>
@@ -210,7 +300,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="col-12 d-flex" style={{ justifyContent: 'center' , marginTop: 5 , paddingBottom: 40 }}>
-            <button type="button" className={styles.button_section+" btn"}>Descubra se você tem chances de cancelar a multa: clique aqui. </button>
+            <button type="button" className={styles.button_section+" btn"} style={{ fontSize: width <= 360 ? 13 : ( width <= 460 ? 14 : 16) }}>Descubra se você tem chances de cancelar a multa: clique aqui. </button>
           </div>
         </div>
       </section>  
@@ -242,11 +332,14 @@ const Home: NextPage = () => {
         <div className="container">
           <div 
             className="row"
-            style={{ position: 'relative' , top: 35 , marginLeft: 0.3 , width: '100%' , paddingLeft: 50 , paddingRight: 50 }}
+            style={{ position: 'relative' , top: 35 , marginLeft: 0.3 , width: '100%' , paddingLeft: width <= 360 ? 0 : ( width <= 460 ? 0 : 50) , paddingRight: width <= 360 ? 0 : ( width <= 460 ? 0 : 50) }}
           >
             <div
               className="card col-md-12 col-lg-4"
-              style={{ height: 300 , backgroundColor: '#B89161'}}
+              style={{
+                height: 300 ,
+                backgroundColor: '#B89161'
+              }}
             >
               <div className="card-body" style={{ padding: 25 }}>
                 <div className=" col-12 d-flex justify-content-center">
@@ -258,7 +351,7 @@ const Home: NextPage = () => {
             </div>
             <div
               className="card col-md-12 col-lg-4"
-              style={{ height: 300}}
+              style={{ height: 300 }}
             >
               <div className="card-body" style={{ padding: 25 }}>
                 <div className="col-12 d-flex justify-content-center">
@@ -309,18 +402,18 @@ const Home: NextPage = () => {
           
           <div 
             className="col-12 row"
-            style={{ marginTop: 20, paddingBottom: 80  , paddingLeft: 50 , paddingRight: 50, fontFamily: 'Spartan, sans-serif' }}
+            style={{ marginTop: 20, paddingBottom: 80  , paddingLeft: width <= 460 ? 20 : 50 , paddingRight: width <= 460 ? 0 : 50, fontFamily: 'Spartan, sans-serif' }}
           >
             <div className="col-12 d-flex" style={{ justifyContent: 'center', paddingBottom: 20}}>
               <button type="button" className={styles.button_section+" btn"}>Contate-nos!</button>
             </div>
             <div
-              className={"card col-md-4 col-lg-4"}
-              style={{ height: 350 , background: 'none' , borderLeft: 'none' , borderTop: 'none' , borderBottom: 'none' , borderRight: 'none'}}
+              className={"card col-sm-12 col-md-4 col-lg-4"}
+              style={{ height: 350 , background: 'none' , border:'none'}}
             >
               <div className="card-body row" style={{ padding: 25 }}>
                 <div className={styles.hover_icon_efect +" "+ styles.img_icon+" col-12 d-flex justify-content-center"} style={{ height: 40}}>
-                  <img src="https://promultas.com.br/wp-content/uploads/2022/04/contracts.png" alt="Solicite a avaliação gratuita" width="60" height="60" />
+                  <img src="https://promultas.com.br/wp-content/uploads/2022/04/contracts.png" alt="" srcSet="" width="60" height="60" />
                 </div>
                 <div className="col-12" style={{ textAlign: 'center' }}>
                   <span className="card-title col-12" style={{ textAlign: 'center', fontSize: 20 , fontWeight: 'bold'}}>Solicite a avaliação gratuita</span>
@@ -330,12 +423,12 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div
-              className={" card col-md-4 col-lg-4"}
-              style={{ height: 350 , background: 'none' ,borderTop: 'none' , borderBottom: 'none' , borderRadius: 0}}
+              className={"card col-sm-12 col-md-4 col-lg-4"}
+              style={{ height: 350 , background: 'none' ,borderTop: width <= 460 ? null : 'none' , borderBottom: width <= 460 ? null : 'none' , borderLeft:  width <= 360 ? 'none' : ( width <= 460 ? 'none' : null), borderRight:  width <= 360 ? 'none' : ( width <= 460 ? 'none' : null), borderRadius: 0}}
             >
               <div className="card-body row" style={{ padding: 25 }}>
                 <div className={styles.hover_icon_efect +" col-12 d-flex justify-content-center"} style={{ height: 90}}>
-                  <img src="https://promultas.com.br/wp-content/uploads/2022/04/copyrights.png" alt="Faremos a análise do caso" width="60" height="60" />
+                  <img src="https://promultas.com.br/wp-content/uploads/2022/04/copyrights.png" alt="" srcSet="" width="60" height="60" />
                 </div>
                 <div className="col-12" style={{ textAlign: 'center' }}>
                   <h5 className="card-title col-12" style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold'}}>Faremos a análise do caso</h5>
@@ -345,12 +438,12 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div
-              className={" card col-md-4 col-lg-4"}
-              style={{ height: 350 , background: 'none' , borderLeft: 'none' , borderTop: 'none' , borderBottom: 'none' , borderRight: 'none'}}
+              className={" card col-sm-12 col-md-4 col-lg-4"}
+              style={{ height: 350 , background: 'none' , border: 'none' }}
             >
               <div className="card-body row" style={{ padding: 25 }}>
                 <div className={styles.hover_icon_efect + " col-12 d-flex justify-content-center"} style={{ height: 90}}>
-                  <img src="https://promultas.com.br/wp-content/uploads/2022/04/child.png" alt="Recurso elaborado!"  width="60" height="60" />
+                  <img src="https://promultas.com.br/wp-content/uploads/2022/04/child.png" alt="" srcSet="" width="60" height="60" />
                 </div>
                 <div className="col-12" style={{ textAlign: 'center' }}>
                   <h5 className="card-title col-12" style={{textAlign: 'center', fontSize: 20, fontWeight: 'bold'}}>Recurso elaborado!</h5>
