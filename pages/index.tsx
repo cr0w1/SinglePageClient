@@ -404,7 +404,11 @@ const Home: NextPage = () => {
             </div>
             <div
               className={"card col-sm-12 col-md-4 col-lg-4"}
-              style={{ height: 350 , background: 'none' ,borderTop: width <= 460 ? null : 'none' , borderBottom: width <= 460 ? null : 'none' , borderLeft:  width <= 360 ? 'none' : ( width <= 460 ? 'none' : null), borderRight:  width <= 360 ? 'none' : ( width <= 460 ? 'none' : null), borderRadius: 0}}
+              style={{height: 350 ,
+                background: 'none' , 
+                borderTop:'none',
+                borderBottom: 'none',
+                borderRadius: 0}}
             >
               <div className="card-body row" style={{ padding: 25 }}>
                 <div className={styles.hover_icon_efect +" col-12 d-flex justify-content-center"} style={{ height: 90}}>
