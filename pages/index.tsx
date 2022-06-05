@@ -11,12 +11,17 @@ import { ImProfile } from 'react-icons/im'
 import { GrSearch } from 'react-icons/gr'
 import styled, { keyframes } from 'styled-components';
 import { slideInLeft } from 'react-animations';
+import Image from 'next/image'
 
 const slideInLeftAnimation = keyframes`${slideInLeft}`;
 
 const BouncyDiv = styled.div`
   animation: 2s ${slideInLeftAnimation};
 `;
+
+const imagem_1 = () => {
+  return 'https://imgur.com/2kXZ7AS.png'
+}
 
 const Home: NextPage = () => {
   return (
@@ -71,7 +76,12 @@ const Home: NextPage = () => {
             <BouncyDiv
               className="col-lg-5 col-md-12  d-flex justify-content-center align-items-end"
             >
-              <img src="https://imgur.com/2kXZ7AS.png" alt="" srcSet="" />
+              <Image
+                loader={imagem_1}
+                src="me.png"
+                width={500}
+                height={630}
+              />
             </BouncyDiv>
             <div
               className="col-md-12 col-lg-7"
