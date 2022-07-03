@@ -78,7 +78,7 @@ const Home: NextPage = () => {
                     fontWeight: 'bold',
                     color: '#fff',
                     
-                  }}>Foi multado pela Lei Seca?</span>
+                  }}>Foi multado ?</span>
               </div>
               <div className="col-12 d-flex  justify-content-center align-items-center" style={{ padding: '15px 0' }}>
                 <span style={{
@@ -100,14 +100,15 @@ const Home: NextPage = () => {
                     height: 1
                   }}></span>
               </div>
-              <div className="col-12 d-flex justify-content-center align-items-center" style={{ marginTop: 30 }}>
+              <div className="col-12 d-flex justify-content-center align-items-center" style={{ marginTop: 20 }}>
                 <button
                   type="button"
                   className={styles.button_primory_section+" btn"}
                 >CLIQUE AQUI E RECEBA UMA AVALIAÇÃO SEM CUSTO <IoIosArrowDown size={20}/></button>
               </div>
-              <div className="col-12 d-flex  justify-content-center align-items-center">
-                <img src="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png" className="attachment-medium_large size-medium_large" alt="" loading="lazy" srcSet="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png 768w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-300x73.png 300w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo.png 843w" sizes="(max-width: 768px) 100vw, 768px" />
+              <div className="col-12 d-flex  justify-content-center align-items-center" style={{ marginTop: 20 }}>
+                {/* <img src="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png" className="attachment-medium_large size-medium_large" alt="" loading="lazy" srcSet="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png 768w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-300x73.png 300w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo.png 843w" sizes="(max-width: 768px) 100vw, 768px" /> */}
+                <img src="https://imgur.com/VlzZ2Ti.png 843w"  sizes="(max-width: 768px) 100vw, 768px" height={220} width={width <= 360 ? 300 : ( width <= 460 ? 300 : 400)}/>
               </div>
             </div>
           </div>
@@ -136,20 +137,21 @@ const Home: NextPage = () => {
               className="col-md-12 col-lg-7"
             >
               <div style={{ marginTop: 50 , fontSize: 16 , color: '#7A7A7A' , fontFamily: 'Times New Roman , sans-serif'}}>
-                <h5 style={{ margin: 0 , color: '#B89161' , fontWeight: 'bold' , fontSize: 25 }}>Recusou fazer o teste?</h5>
-                <h5 style={{ color: '#B89161' , fontWeight: 'bold' , fontSize: 25 }}>Soprou o bafômetro?</h5> 
-                <h5 style={{ fontWeight: 'bold' , marginBottom: 30 , fontSize: 24 , color: '#141414' }}>Bem-vindo à PROMultas</h5>
+                <h5 style={{ margin: 0 , color: '#B89161' , fontWeight: 'bold' , fontSize: 25 }}>Foi parado na blitz?</h5>
+                <h5 style={{ color: '#B89161' , fontWeight: 'bold' , fontSize: 25 }}>Fez o teste ou rescusou?</h5> 
+                <h5 style={{ color: '#B89161' , fontWeight: 'bold' , fontSize: 25 }}>Nos vamos te ajudar!</h5> 
+                <h5 style={{ fontWeight: 'bold' , marginBottom: 30 , fontSize: 24 , color: '#141414' }}>Bem-vindo à Leite&Neves</h5>
                 <p>
-                  Advogados com Especialização em Direito de Trânsito que te ajudam a entender a infração e evitar as penalidades.
+                  Nosso escritorio é especialista em Direito de transito.
                 </p>
                 <p>
-                  Conheça as razões que podem cancelar a multa e evitar a suspensão da CNH. Não deixe de ler toda a página.
+                  Nós sabemos exatamente o que fazer para cancelar/anular sua multa.
                 </p>
 
-                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Evite: 3 mil reais de multa e 1 ano sem CNH</span><br/>
-                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Contato direto com advogado</span><br/>
-                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Estamos atualizados com: Resoluções do CONTRAN e decisão do STF de 2022</span><br/>
-                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Serviço <strong>PREMIUM</strong>, mas de valor acessível e justo</span><br/>
+                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Somos especialistas</span><br/>
+                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>temos expertise no assunto</span><br/>
+                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Você esta contratando um advogado</span><br/>
+                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Nosso trabalho é <strong>PREMIUM</strong>, <strong>acessível</strong> e de <strong>qualidade</strong></span><br/>
               </div>
 
               <div 
@@ -200,7 +202,8 @@ const Home: NextPage = () => {
                       <FiPhoneCall size={45} color='#B89161'/>
                     </div>
                     <div className="col-9">
-                      <h5 className="card-title col-12" style={{textAlign: 'start', fontSize: 20, fontWeight: 'bold'}}>(00) 00000-0000</h5>
+                      <h5 className="card-title col-12" style={{textAlign: 'start', fontSize: 20, fontWeight: 'bold'}}>(81) 98688-0070</h5>
+                      <h5 className="card-title col-12" style={{textAlign: 'start', fontSize: 20, fontWeight: 'bold'}}>(81) 97344-9514</h5>
                       <span className="card-text col-12" style={{ marginTop: 46 }}>Atendemos todo o Brasil</span>
                     </div>
                   </div>
@@ -284,7 +287,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>  
-      <section
+      {/* <section
         style={{ width: '100%', backgroundColor: '#FFFFFF'}}
       >
         <div className="container">
@@ -305,7 +308,7 @@ const Home: NextPage = () => {
             </p>
           </div>
         </div>
-      </section>
+      </section> */}
       <section
         style={{ width: '100%' }}
       >
@@ -387,7 +390,7 @@ const Home: NextPage = () => {
             <div className="col-12 d-flex" style={{ justifyContent: 'center', paddingBottom: 20}}>
               <button type="button" className={styles.button_section+" btn"}>Contate-nos!</button>
             </div>
-            <div
+            {/* <div
               className={"card col-sm-12 col-md-4 col-lg-4"}
               style={{ height: 350 , background: 'none' , border:'none'}}
             >
@@ -401,13 +404,15 @@ const Home: NextPage = () => {
                   <a className={styles.link_} href="#">Sem Custo <FiArrowRight size={20}/></a>
                 </div>
               </div>
-            </div>
+            </div> */}
             <div
-              className={"card col-sm-12 col-md-4 col-lg-4"}
-              style={{height: 350 ,
+              className={"card col-sm-12 col-md-6 col-lg-6"}
+              style={{
+                height: 350 ,
                 background: 'none' , 
                 borderTop:'none',
                 borderBottom: 'none',
+                borderLeft: 'none',
                 borderRadius: 0}}
             >
               <div className="card-body row" style={{ padding: 25 }}>
@@ -422,7 +427,7 @@ const Home: NextPage = () => {
               </div>
             </div>
             <div
-              className={" card col-sm-12 col-md-4 col-lg-4"}
+              className={" card col-sm-12 col-md-6 col-lg-6"}
               style={{ height: 350 , background: 'none' , border: 'none' }}
             >
               <div className="card-body row" style={{ padding: 25 }}>
@@ -446,15 +451,15 @@ const Home: NextPage = () => {
           <div style={{ height: 80 , width: '100%'}}>
           </div>
           <div className="col-12" style={{ textAlign: 'center', paddingBottom: 10 ,fontSize: 11 , color: '#FFFFFF' }}>
-            <span>2022 PROMultas© Todos os direitos reservados. Endereços: Edifício JTR – R. Comerc. José Pontes de Magalhães, n. 70, Jatiúca, Maceió – AL.</span><br/>
-            <span>Av. Dr. Chucri Zaidan, 1240 – Chácara Santo Antônio (Zona Sul), São Paulo – SP.</span><br/>
-            <span>Atendemos todo o Brasil | A PROMultas não presta qualquer serviço na esfera judicial, atuando apenas na esfera administrativa.</span>
+            <span>2022 Leite&Neves© Todos os direitos reservados. Endereço:Estrada do Barbalho, 970 Segundo andar - Iputinga , Recife - PE.</span><br/>
+            {/* <span>Av. Dr. Chucri Zaidan, 1240 – Chácara Santo Antônio (Zona Sul), São Paulo – SP.</span><br/> */}
+            <span>Atendemos todo o Brasil | A Leite & Neves não presta qualquer serviço na esfera judicial, atuando apenas na esfera administrativa.</span>
           </div>
         </div>
       </section>
       <div className={styles.fab_container}>
         <div className={`${styles.button} ${styles.iconbutton}`}>
-          <a href="" target="_blank">
+          <a href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)" target="_blank">
             <BsWhatsapp size={25} color='#fff'/>
           </a>
         </div>
