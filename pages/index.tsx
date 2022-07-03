@@ -459,7 +459,7 @@ const Home: NextPage = () => {
       </section>
       <div className={styles.fab_container}>
         <div className={`${styles.button} ${styles.iconbutton}`}>
-          <a href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)" target="_blank">
+          <a href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)" target="_blank" rel="noreferrer">
             <BsWhatsapp size={25} color='#fff'/>
           </a>
         </div>
