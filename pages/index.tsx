@@ -21,7 +21,8 @@ const BouncyDiv = styled.div`
 `;
 
 const imagem_1 = () => {
-  return 'https://imgur.com/2kXZ7AS.png'
+  // return 'https://imgur.com/2kXZ7AS.png'
+  return 'https://imgur.com/PmE6SP1.png'
 }
 
 const Home: NextPage = () => {
@@ -43,7 +44,7 @@ const Home: NextPage = () => {
         <meta charSet="UTF-8" />
             <title>Adv. Lei Seca - PROMultas</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-          <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
         <link rel="canonical" href="https://promultas.com.br/advogados-lei-seca/" />
       </Head>
 
@@ -137,9 +138,9 @@ const Home: NextPage = () => {
               className="col-md-12 col-lg-7"
             >
               <div style={{ marginTop: 50 , fontSize: 16 , color: '#7A7A7A' , fontFamily: 'Times New Roman , sans-serif'}}>
-                <h5 style={{ margin: 0 , color: '#B89161' , fontWeight: 'bold' , fontSize: 25 }}>Foi parado na blitz?</h5>
-                <h5 style={{ color: '#B89161' , fontWeight: 'bold' , fontSize: 25 }}>Fez o teste ou rescusou?</h5> 
-                <h5 style={{ color: '#B89161' , fontWeight: 'bold' , fontSize: 25 }}>Nos vamos te ajudar!</h5> 
+                <h5 style={{ margin: 0 , color: '#C59589' , fontWeight: 'bold' , fontSize: 25 }}>Foi parado na blitz?</h5>
+                <h5 style={{ color: '#C59589' , fontWeight: 'bold' , fontSize: 25 }}>Fez o teste ou rescusou?</h5> 
+                <h5 style={{ color: '#C59589' , fontWeight: 'bold' , fontSize: 25 }}>Nos vamos te ajudar!</h5> 
                 <h5 style={{ fontWeight: 'bold' , marginBottom: 30 , fontSize: 24 , color: '#141414' }}>Bem-vindo à Leite&Neves</h5>
                 <p>
                   Nosso escritorio é especialista em Direito de transito.
@@ -148,10 +149,10 @@ const Home: NextPage = () => {
                   Nós sabemos exatamente o que fazer para cancelar/anular sua multa.
                 </p>
 
-                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Somos especialistas</span><br/>
-                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>temos expertise no assunto</span><br/>
-                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Você esta contratando um advogado</span><br/>
-                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#B89161' }}/>Nosso trabalho é <strong>PREMIUM</strong>, <strong>acessível</strong> e de <strong>qualidade</strong></span><br/>
+                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#C59589' }}/>Somos especialistas</span><br/>
+                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#C59589' }}/>temos expertise no assunto</span><br/>
+                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#C59589' }}/>Você esta contratando um advogado</span><br/>
+                <span ><BsCheck size={25} style={{ marginRight:5 , color: '#C59589' }}/>Nosso trabalho é <strong>PREMIUM</strong>, <strong>acessível</strong> e de <strong>qualidade</strong></span><br/>
               </div>
 
               <div 
@@ -175,7 +176,7 @@ const Home: NextPage = () => {
                 >
                   <div className="card-body row" style={{ padding: 25 }}>
                     <div className="col-3">
-                      <FaBalanceScale size={45} color='#B89161'/>
+                      <FaBalanceScale size={45} color='#C59589'/>
                     </div>
                     <div className="col-9">
                       <h5 className="card-title col-12" style={{ margin: 0 , textAlign: 'start', fontSize: 20 , fontWeight: 'bold'}}>Advogados</h5>
@@ -199,7 +200,7 @@ const Home: NextPage = () => {
                 >
                   <div className="card-body row" style={{ padding: 25 }}>
                     <div className="col-3">
-                      <FiPhoneCall size={45} color='#B89161'/>
+                      <FiPhoneCall size={45} color='#C59589'/>
                     </div>
                     <div className="col-9">
                       <h5 className="card-title col-12" style={{textAlign: 'start', fontSize: 20, fontWeight: 'bold'}}>(81) 98688-0070</h5>
@@ -223,7 +224,7 @@ const Home: NextPage = () => {
         <div className="container">
           <div className="col-12" style={{ textAlign: 'center' , fontSize: 14 , color: '#333333' , padding: 20 }}>
             <div style={{ marginBottom: 10 }}>
-              <BiShield size={50} color='#B89161'/>
+              <BiShield size={50} color='#C59589'/>
             </div>
             <h6 style={{ fontWeight: 'bold' , }}>Infrações da Lei Seca:</h6><br/>
             <div style={{ marginBottom: 20 }}>
@@ -247,7 +248,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section
-        style={{ width: '100%', backgroundColor: '#B89161', fontFamily: 'Spartan, sans-serif'}}
+        style={{ width: '100%', backgroundColor: '#C59589', fontFamily: 'Spartan, sans-serif'}}
       > 
         <div className="col-12" style={{ paddingTop: 10, paddingLeft: width <= 360 ? 0 : ( width <= 460 ? 0 : 50) , paddingRight: width <= 360 ? 0 : ( width <= 460 ? 0 : 50) , paddingBottom: 10 ,}}>
           <div className="container">
@@ -271,7 +272,7 @@ const Home: NextPage = () => {
         <div className="container">
           <div className="col-12" style={{ textAlign: 'center' , fontSize: 14 , color: '#333333' , padding: 20 }}>
             <div style={{ marginBottom: 10 }}>
-              <ImProfile size={50} color='#B89161'/>
+              <ImProfile size={50} color='#C59589'/>
             </div>
             <h6 style={{ fontWeight: 'bold' , }}>O que ocorre no momento da abordagem:</h6>
             <div style={{ fontSize: 14 }}>
@@ -321,7 +322,7 @@ const Home: NextPage = () => {
               className="card col-md-12 col-lg-4"
               style={{
                 height: 300 ,
-                backgroundColor: '#B89161'
+                backgroundColor: '#C59589'
               }}
             >
               <div className="card-body" style={{ padding: 25 }}>
@@ -365,7 +366,7 @@ const Home: NextPage = () => {
         <div className="container">
           <div className="col-12" style={{ textAlign: 'center' , fontSize: 14 , color: '#333333' , paddingTop: 60 , paddingBottom: 20, fontFamily: 'Spartan, sans-serif'}}>
             <p>
-              <h6 style={{ fontWeight: 'bold' , color: '#B89161' , fontSize: 21 }}>Entenda as razões para</h6>
+              <h6 style={{ fontWeight: 'bold' , color: '#C59589' , fontSize: 21 }}>Entenda as razões para</h6>
               <h5 style={{ fontWeight: 'bold' , }}>RECORRER da MULTA ou PROCESSO:</h5>
             </p>
             <p>
@@ -422,7 +423,7 @@ const Home: NextPage = () => {
                 <div className="col-12" style={{ textAlign: 'center' }}>
                   <h5 className="card-title col-12" style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold'}}>Faremos a análise do caso</h5>
                   <p className="card-text col-12" >Todo procedimento se dá de forma online e rápida. Não vendemos modelos prontos e sim uma experiência personalizada.</p>
-                  <a className={styles.link_} href="#">Retorno em minutos <FiArrowRight size={20}/></a>
+                  <a className={styles.link_} href="#">Retorno em minutos <FiArrowRight color='#C59589' size={20}/></a>
                 </div>
               </div>
             </div>
@@ -437,7 +438,7 @@ const Home: NextPage = () => {
                 <div className="col-12" style={{ textAlign: 'center' }}>
                   <h5 className="card-title col-12" style={{textAlign: 'center', fontSize: 20, fontWeight: 'bold'}}>Recurso elaborado!</h5>
                   <p className="card-text col-12" >Todo procedimento se dá de forma online e rápida. Não vendemos modelos prontos e sim uma experiência personalizada.</p>
-                  <a className={styles.link_} href="#">Sem modelos prontos<FiArrowRight size={20}/></a>
+                  <a className={styles.link_} href="#">Sem modelos prontos<FiArrowRight color='#C59589' size={20}/></a>
                 </div>
               </div>
             </div>
@@ -445,7 +446,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section
-        style={{ width: '100%', backgroundColor: '#B89161'}}
+        style={{ width: '100%', backgroundColor: '#C59589'}}
       > 
         <div className="container">
           <div style={{ height: 80 , width: '100%'}}>
