@@ -454,7 +454,8 @@ const Home: NextPage = () => {
           <div className="col-12" style={{ textAlign: 'center', paddingBottom: 10 ,fontSize: 11 , color: '#FFFFFF' }}>
             <span>2022 Leite&Neves© Todos os direitos reservados. Endereço:Estrada do Barbalho, 970 Segundo andar - Iputinga , Recife - PE.</span><br/>
             {/* <span>Av. Dr. Chucri Zaidan, 1240 – Chácara Santo Antônio (Zona Sul), São Paulo – SP.</span><br/> */}
-            <span>Atendemos todo o Brasil | A Leite & Neves não presta qualquer serviço na esfera judicial, atuando apenas na esfera administrativa.</span>
+            <span>Atendemos todo o Brasil | A Leite & Neves presta qualquer serviço na esfera judicial.</span>
+            {/* , atuando apenas na esfera administrativa */}
           </div>
         </div>
       </section>
