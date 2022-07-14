@@ -45,7 +45,6 @@ const Home: NextPage = () => {
             <title>Adv. - Leite&Neves</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
         <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-        <link rel="canonical" href="https://promultas.com.br/advogados-lei-seca/" />
       </Head>
 
       <section className={styles.section_initial} style={{ width: '100%', height: width <= 360 ? 600 : ( width <= 460 ? 650 : 767.5) }}>
