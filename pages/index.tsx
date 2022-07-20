@@ -101,10 +101,12 @@ const Home: NextPage = () => {
                   }}></span>
               </div>
               <div className="col-12 d-flex justify-content-center align-items-center" style={{ marginTop: 20 }}>
-                <button
-                  type="button"
-                  className={styles.button_primory_section+" btn"}
-                >CLIQUE AQUI E RECEBA UMA AVALIAÇÃO SEM CUSTO <IoIosArrowDown size={20}/></button>
+                <a href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)" target="_blank" rel="noreferrer">
+                  <button
+                    type="button"
+                    className={styles.button_primory_section+" btn"}
+                  >CLIQUE AQUI E RECEBA UMA AVALIAÇÃO SEM CUSTO <IoIosArrowDown size={20}/></button>
+                </a>
               </div>
               <div className="col-12 d-flex  justify-content-center align-items-center" style={{ marginTop: 20 }}>
                 {/* <img src="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png" className="attachment-medium_large size-medium_large" alt="" loading="lazy" srcSet="https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-768x187.png 768w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo-300x73.png 300w, https://promultas.com.br/wp-content/uploads/2022/04/promultas_logo_-novo.png 843w" sizes="(max-width: 768px) 100vw, 768px" /> */}
@@ -210,7 +212,9 @@ const Home: NextPage = () => {
                 </div>
               </div>
               <div className="col-12 d-flex" style={{ marginTop: 25, marginBottom: 10  , justifyContent: 'center'}}>
-                <button type="button" className={styles.button_section+" btn"} >Contate-nos!</button>
+                <a href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)" target="_blank" rel="noreferrer">
+                  <button type="button" className={styles.button_section+" btn"} >Contate-nos!</button>
+                </a>
               </div>
             </div>
           </div>
@@ -242,7 +246,9 @@ const Home: NextPage = () => {
             </div>
           </div>        
           <div className="col-12 d-flex" style={{ justifyContent: 'center' , marginTop: 5 , paddingBottom: 18 }}>
-            <button type="button" className={styles.button_section+" btn"}>Saiba mais sem custo!</button>
+            <a href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)" target="_blank" rel="noreferrer">
+              <button type="button" className={styles.button_section+" btn"}>Saiba mais sem custo!</button>
+            </a>
           </div>
         </div>
       </section>
@@ -283,7 +289,9 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="col-12 d-flex" style={{ justifyContent: 'center' , marginTop: 5 , paddingBottom: 40 }}>
-            <button type="button" className={styles.button_section+" btn"} style={{ fontSize: width <= 360 ? 13 : ( width <= 460 ? 14 : 16) }}>Descubra se você tem chances de cancelar a multa: clique aqui. </button>
+            <a href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)" target="_blank" rel="noreferrer">
+              <button type="button" className={styles.button_section+" btn"} style={{ fontSize: width <= 360 ? 13 : ( width <= 460 ? 14 : 16) }}>Descubra se você tem chances de cancelar a multa: clique aqui. </button>
+            </a>
           </div>
         </div>
       </section>  
@@ -388,7 +396,9 @@ const Home: NextPage = () => {
             style={{ marginTop: 20, paddingBottom: 80  , paddingLeft: width <= 460 ? 20 : 50 , paddingRight: width <= 460 ? 0 : 50, fontFamily: 'Spartan, sans-serif' }}
           >
             <div className="col-12 d-flex" style={{ justifyContent: 'center', paddingBottom: 20}}>
-              <button type="button" className={styles.button_section+" btn"}>Contate-nos!</button>
+              <a href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)" target="_blank" rel="noreferrer">
+                <button type="button" className={styles.button_section+" btn"}>Contate-nos!</button>
+              </a>
             </div>
             {/* <div
               className={"card col-sm-12 col-md-4 col-lg-4"}
@@ -422,7 +432,7 @@ const Home: NextPage = () => {
                 <div className="col-12" style={{ textAlign: 'center' }}>
                   <h5 className="card-title col-12" style={{ textAlign: 'center', fontSize: 20, fontWeight: 'bold'}}>Faremos a análise do caso</h5>
                   <p className="card-text col-12" >Todo procedimento se dá de forma online e rápida. Não vendemos modelos prontos e sim uma experiência personalizada.</p>
-                  <a className={styles.link_} href="#">Retorno em minutos <FiArrowRight color='#C59589' size={20}/></a>
+                  <a className={styles.link_} href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)">Retorno em minutos <FiArrowRight color='#C59589' size={20}/></a>
                 </div>
               </div>
             </div>
@@ -437,7 +447,7 @@ const Home: NextPage = () => {
                 <div className="col-12" style={{ textAlign: 'center' }}>
                   <h5 className="card-title col-12" style={{textAlign: 'center', fontSize: 20, fontWeight: 'bold'}}>Recurso elaborado!</h5>
                   <p className="card-text col-12" >Todo procedimento se dá de forma online e rápida. Não vendemos modelos prontos e sim uma experiência personalizada.</p>
-                  <a className={styles.link_} href="#">Sem modelos prontos<FiArrowRight color='#C59589' size={20}/></a>
+                  <a className={styles.link_} href="https://wa.me/5581986880070?text=Sej%C3%A1%20Bem%20Vindo(a)">Sem modelos prontos<FiArrowRight color='#C59589' size={20}/></a>
                 </div>
               </div>
             </div>
