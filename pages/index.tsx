@@ -42,9 +42,10 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <meta charSet="UTF-8" />
-            <title>Adv. - Leite&Neves</title>
+        <title>Leite&Neves Advogados</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" /> 
         <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+        <meta name="keywords" content="Lei seca,Suspensão,Cassação,CNH,PPD,HABILITAÇÃO,ADVOGADADETRANSITO,TRÂNSITO,DETRAN,SENATRAN,Multa,Advogado" />
       </Head>
 
       <section className={styles.section_initial} style={{ width: '100%', height: width <= 360 ? 600 : ( width <= 460 ? 650 : 767.5) }}>
